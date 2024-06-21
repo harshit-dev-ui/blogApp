@@ -9,7 +9,7 @@ import store from "./store/store.js";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Protected from "./components/AuthLayout.jsx";
-import SignUp from "./pages/SignUp.jsx";
+import Signup from "./pages/Signup.jsx";
 import AllPosts from "./pages/AllPosts.jsx";
 import AddPost from "./pages/AddPost.jsx";
 import EditPost from "./pages/EditPost.jsx";
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: (
-          <Protected authentiation={false}>
+          <Protected authentication={false}>
             <Login />
           </Protected>
         ),
@@ -35,8 +35,8 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: (
-          <Protected authentiation={false}>
-            <SignUp />
+          <Protected authentication={false}>
+            <Signup />
           </Protected>
         ),
       },

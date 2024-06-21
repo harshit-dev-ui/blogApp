@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Loader } from "react-js-loader";
+
 function Protected({ children, authentication = true }) {
   const authStatus = useSelector((state) => state.auth.status);
 
@@ -18,7 +18,7 @@ function Protected({ children, authentication = true }) {
     setLoader(false);
   }, [authStatus, authentication, navigate]);
 
-  return loader ? <Loader /> : <>{children}</>;
+  return loader ? null : <>{children}</>;
 }
 
 export default Protected;
